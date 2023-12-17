@@ -50,8 +50,8 @@ main() {
   set message-command-style "fg=${thm_cyan},bg=${thm_gray},align=centre"
 
   # panes
-  set pane-border-style "fg=${thm_gray}"
-  set pane-active-border-style "fg=${thm_blue}"
+  set pane-border-style "fg=${thm_bg}"
+  set pane-active-border-style "fg=${thm_orange}"
 
   # windows
   setw window-status-activity-style "fg=${thm_fg},bg=${thm_bg},none"
@@ -108,8 +108,7 @@ main() {
 
   local show_window_in_window_status_current
   readonly show_window_in_window_status_current="#[fg=$thm_fg,bg=$thm_gray] #W #[fg=$thm_bg,bg=$thm_orange] #I#[fg=$thm_orange,bg=$thm_bg]$left_separator#[fg=$thm_fg,bg=$thm_bg,nobold,nounderscore,noitalics] "
- #setw -g window-status-current-format "#[fg=colour232,bg=$thm_orange] #I #[fg=colour255,bg=colour237] #(echo '#{pane_current_path}' | rev | cut -d'/' -f-2 | rev) "
-
+  #setw -g window-status-current-format "#[fg=colour232,bg=$thm_orange] #I #[fg=colour255,bg=colour237] #(echo '#{pane_current_path}' | rev | cut -d'/' -f-2 | rev) "
 
   local show_user
   readonly show_user="#[fg=$thm_blue,bg=$thm_gray]$right_separator#[fg=$thm_bg,bg=$thm_blue] #[fg=$thm_fg,bg=$thm_gray] #(whoami) "
